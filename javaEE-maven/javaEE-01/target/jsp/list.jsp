@@ -5,11 +5,11 @@
   Time: 18:43
   To change this template use File | Settings | File Templates.
 --%>
-<%@ page import="StudentHomework" %>
+<%@ page import="org.example.javaee.class01.model.StudentHomework" %>
 
 <%@ page import="java.util.List" %>
 
-<%@ page import="StudentHomeworkJdbc" %>
+<%@ page import="org.example.javaee.class01.jdbc.StudentHomeworkJdbc" %>
 
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 

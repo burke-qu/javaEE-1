@@ -1,22 +1,22 @@
 <component name="ArtifactManager">
-  <artifact type="exploded-war" name="javaEE-01-out">
-    <output-path>$PROJECT_DIR$/javaEE-01/target</output-path>
+  <artifact type="exploded-war" name="javaEE-SpringMVC-out">
+    <output-path>$PROJECT_DIR$/javaEE-SpringMVC/target</output-path>
     <root id="root">
       <element id="directory" name="WEB-INF">
         <element id="directory" name="classes">
-          <element id="module-output" name="javaEE-01" />
+          <element id="module-output" name="javaEE-SpringMVC" />
         </element>
         <element id="directory" name="lib">
-          <element id="library" level="project" name="Maven: mysql:mysql-connector-java:8.0.19" />
-          <element id="library" level="project" name="Maven: com.google.protobuf:protobuf-java:3.6.1" />
           <element id="library" level="project" name="Maven: com.zaxxer:HikariCP:3.4.2" />
-          <element id="library" level="project" name="Maven: javax.servlet:javax.servlet-api:3.1.0" />
+          <element id="library" level="project" name="Maven: com.google.protobuf:protobuf-java:3.6.1" />
           <element id="library" level="project" name="Maven: org.example:core:unknown" />
+          <element id="library" level="project" name="Maven: javax.servlet:javax.servlet-api:3.1.0" />
+          <element id="library" level="project" name="Maven: mysql:mysql-connector-java:8.0.19" />
           <element id="library" level="project" name="Maven: org.example:db:unknown" />
           <element id="library" level="project" name="Maven: org.slf4j:slf4j-api:1.7.25" />
         </element>
       </element>
-      <element id="javaee-facet-resources" facet="javaEE-01/web/Web" />
+      <element id="javaee-facet-resources" facet="javaEE-SpringMVC/web/Web" />
     </root>
   </artifact>
 </component>

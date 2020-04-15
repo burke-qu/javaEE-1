@@ -1,0 +1,6 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="javaEE-SpringMVC">
+    <output-path>$PROJECT_DIR$/target/artifacts/javaEE_SpringMVC</output-path>
+    <root id="archive" name="javaEE-SpringMVC.war" />
+  </artifact>
+</component>
