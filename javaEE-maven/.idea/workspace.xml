@@ -86,7 +86,7 @@
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.21207659" />
-    <property name="settings.editor.selected.configurable" value="MavenSettings" />
+    <property name="settings.editor.selected.configurable" value="spring" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -274,7 +274,8 @@
       <workItem from="1585317601829" duration="23000" />
       <workItem from="1586176158391" duration="16615000" />
       <workItem from="1586363308463" duration="8079000" />
-      <workItem from="1586674787759" duration="10063000" />
+      <workItem from="1586674787759" duration="17869000" />
+      <workItem from="1586970884294" duration="1740000" />
     </task>
     <servers />
   </component>
@@ -286,26 +287,34 @@
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="584" y="329" key="#BuildArtifactsBeforeRunChooser/0.0.1920.1050@0.0.1920.1050" timestamp="1586368548199" />
-    <state x="366" y="110" width="1380" height="746" key="#Project_Structure" timestamp="1586874545790">
+    <state x="998" y="237" key="#HTTP_Proxy" timestamp="1586967803211">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="366" y="110" width="1380" height="746" key="#Project_Structure/0.0.1920.1050@0.0.1920.1050" timestamp="1586874545790" />
-    <state x="258" y="179" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1586368568949">
+    <state x="998" y="237" key="#HTTP_Proxy/0.0.1920.1050@0.0.1920.1050" timestamp="1586967803211" />
+    <state x="366" y="110" width="1380" height="746" key="#Project_Structure" timestamp="1586968361640">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="258" y="179" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1050@0.0.1920.1050" timestamp="1586368568949" />
+    <state x="366" y="110" width="1380" height="746" key="#Project_Structure/0.0.1920.1050@0.0.1920.1050" timestamp="1586968361640" />
+    <state x="258" y="179" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1586970659920">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="258" y="179" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1920.1050@0.0.1920.1050" timestamp="1586970659920" />
+    <state x="1046" y="239" key="#com.intellij.ide.util.frameworkSupport.AddFrameworkSupportDialog" timestamp="1586969943915">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="1046" y="239" key="#com.intellij.ide.util.frameworkSupport.AddFrameworkSupportDialog/0.0.1920.1050@0.0.1920.1050" timestamp="1586969943915" />
     <state x="571" y="453" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog" timestamp="1586365278378">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state x="571" y="453" key="#com.intellij.refactoring.move.MoveHandler.SelectRefactoringDialog/0.0.1920.1050@0.0.1920.1050" timestamp="1586365278378" />
-    <state x="786" y="241" key="#com.intellij.util.ui.classpath.ChooseLibrariesDialog" timestamp="1586368789559">
+    <state x="786" y="241" key="#com.intellij.util.ui.classpath.ChooseLibrariesDialog" timestamp="1586970612116">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="786" y="241" key="#com.intellij.util.ui.classpath.ChooseLibrariesDialog/0.0.1920.1050@0.0.1920.1050" timestamp="1586368789559" />
-    <state x="740" y="283" key="FileChooserDialogImpl" timestamp="1586875991246">
+    <state x="786" y="241" key="#com.intellij.util.ui.classpath.ChooseLibrariesDialog/0.0.1920.1050@0.0.1920.1050" timestamp="1586970612116" />
+    <state x="740" y="283" key="FileChooserDialogImpl" timestamp="1586968339513">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="740" y="283" key="FileChooserDialogImpl/0.0.1920.1050@0.0.1920.1050" timestamp="1586875991246" />
+    <state x="740" y="283" key="FileChooserDialogImpl/0.0.1920.1050@0.0.1920.1050" timestamp="1586968339513" />
     <state width="1877" height="264" key="GridCell.Tab.0.bottom" timestamp="1586670428639">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
@@ -370,13 +379,17 @@
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
     <state width="1877" height="352" key="GridCell.Tab.3.right/0.0.1920.1050@0.0.1920.1050" timestamp="1586184938420" />
-    <state x="463" y="170" key="SettingsEditor" timestamp="1586875993607">
+    <state x="386" y="152" key="SettingsEditor" timestamp="1586973204094">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="463" y="170" key="SettingsEditor/0.0.1920.1050@0.0.1920.1050" timestamp="1586875993607" />
-    <state x="352" y="243" key="new project wizard" timestamp="1586364795022">
+    <state x="386" y="152" key="SettingsEditor/0.0.1920.1050@0.0.1920.1050" timestamp="1586973204094" />
+    <state x="352" y="243" key="new project wizard" timestamp="1586968485355">
       <screen x="0" y="0" width="1920" height="1050" />
     </state>
-    <state x="352" y="243" key="new project wizard/0.0.1920.1050@0.0.1920.1050" timestamp="1586364795022" />
+    <state x="352" y="243" key="new project wizard/0.0.1920.1050@0.0.1920.1050" timestamp="1586968485355" />
+    <state x="591" y="217" key="spring file set editor" timestamp="1586968224797">
+      <screen x="0" y="0" width="1920" height="1050" />
+    </state>
+    <state x="591" y="217" key="spring file set editor/0.0.1920.1050@0.0.1920.1050" timestamp="1586968224797" />
   </component>
 </project>
