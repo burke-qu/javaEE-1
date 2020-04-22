@@ -1,28 +1,23 @@
 package org.example.spring.mvc.jdbc;
 
-import org.example.spring.mvc.model.Homework;
-import org.example.spring.mvc.model.Student;
-import org.example.spring.mvc.model.StudentHomework;
+import org.example.spring.mvc.bean.Homework;
+import org.example.spring.mvc.bean.Student;
+import org.example.spring.mvc.bean.StudentHomework;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Scope;
+import org.springframework.stereotype.Component;
 
 import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
-
+@Component("StudentHomeworkJdbc")
+//@Scope("singleton")
 public class StudentHomeworkJdbc {
-    private static String url = "jdbc:mysql://127.0.0.1:3306/school";
-    private static String allUrl = url + "?user=root&password=209999girl&useSSL=false&serverTimezone=UTC";
-    private static String driverName = "com.mysql.cj.jdbc.Driver";
-//    public static void main(String[] args) {
-//
-//        List<StudentHomework> list = selectAll();
-//
-//        for (StudentHomework sh : list){
-//            System.out.println(sh.getHomework_content());
-//        }
-//    }
 
-    public static boolean addStudentHomework(StudentHomework sh){
+    private  String driverName = "com.mysql.cj.jdbc.Driver";
+
+    public  boolean addStudentHomework(StudentHomework sh){
        //
         String sqlString = "insert into s_student_homework(student_id,homework_id,homework_title,homework_content,create_time)" +
                 "values(?,?,?,?,?)";
@@ -60,7 +55,7 @@ public class StudentHomeworkJdbc {
         }
         return false;
     }
-    public static boolean addStudent(Student s){
+    public  boolean addStudent(Student s){
         String sqlString = "insert into s_student(id,name,create_time)" +
                 "values(?,?,?)";
 //                + s.getId()
@@ -94,7 +89,7 @@ public class StudentHomeworkJdbc {
         return false;
 
     }
-    public static boolean addHomework(Homework h){
+    public  boolean addHomework(Homework h){
 
         String sqlString = "insert into s_homework(title,content,create_time,update_time)" +
                 "values(?,?,?,?)";
@@ -132,10 +127,10 @@ public class StudentHomeworkJdbc {
         return false;
     }
 
-    public static List<StudentHomework> selectAll(){
-        String url = "jdbc:mysql://127.0.0.1:3306/school";
-        String allUrl = url + "?user=root&password=209999girl&useSSL=false&serverTimezone=UTC";
-        String driverName = "com.mysql.cj.jdbc.Driver";
+    public  List<StudentHomework> selectAll(){
+//        String url = "jdbc:mysql://127.0.0.1:3306/school";
+//        String allUrl = url + "?user=root&password=209999girl&useSSL=false&serverTimezone=UTC";
+//        String driverName = "com.mysql.cj.jdbc.Driver";
         String sqlString = "SELECT * FROM s_student_homework";
         try {
             // 加载驱动
@@ -148,9 +143,9 @@ public class StudentHomeworkJdbc {
             try(Statement statement = connection.createStatement()){
                 try(ResultSet resultSet = statement.executeQuery(sqlString)){
                     // 获取执行结果
-
                     while (resultSet.next()){
-                        StudentHomework sh = new StudentHomework();
+//                        StudentHomework sh = new StudentHomework();
+                        
                         sh.setId(resultSet.getLong("id"));
                         sh.setStudent_Id(resultSet.getLong("student_id"));
                         sh.setHomework_Id(resultSet.getLong("homework_id"));
@@ -166,8 +161,5 @@ public class StudentHomeworkJdbc {
         }
         return list;
     }
-
-
-
 
 }

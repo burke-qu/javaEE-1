@@ -6,7 +6,6 @@ import com.zaxxer.hikari.HikariDataSource;
 public class DatabasePool {
 
     private static HikariDataSource hikariDataSource;
-
     /**
      * 加一个双层锁
      * @return
@@ -32,15 +31,15 @@ public class DatabasePool {
         return  null;
     }
 
-    public static void main(String[] args) {
-        while(true){
-            getHikariDataSource();
-           try{
-               Thread.sleep(1000);
-           } catch (InterruptedException e) {
-               e.printStackTrace();
-           }
-        }
-    }
+//    public static void main(String[] args) {
+//        while(true){
+//            getHikariDataSource();
+//           try{
+//               Thread.sleep(1000);
+//           } catch (InterruptedException e) {
+//               e.printStackTrace();
+//           }
+//        }
+//    }
 
 }
