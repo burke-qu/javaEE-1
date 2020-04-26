@@ -4,7 +4,9 @@ import org.example.spring.mvc.bean.Homework;
 import org.example.spring.mvc.bean.Student;
 import org.example.spring.mvc.bean.StudentHomework;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.Scope;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
 import org.springframework.stereotype.Component;
 
 import java.sql.*;
@@ -12,7 +14,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Component("StudentHomeworkJdbc")
-//@Scope("singleton")
 public class StudentHomeworkJdbc {
 
     private  String driverName = "com.mysql.cj.jdbc.Driver";
@@ -132,6 +133,7 @@ public class StudentHomeworkJdbc {
 //        String allUrl = url + "?user=root&password=209999girl&useSSL=false&serverTimezone=UTC";
 //        String driverName = "com.mysql.cj.jdbc.Driver";
         String sqlString = "SELECT * FROM s_student_homework";
+        ApplicationContext context = new ClassPathXmlApplicationContext("springmvc-context.xml");
         try {
             // 加载驱动
             Class.forName(driverName);
@@ -144,8 +146,7 @@ public class StudentHomeworkJdbc {
                 try(ResultSet resultSet = statement.executeQuery(sqlString)){
                     // 获取执行结果
                     while (resultSet.next()){
-//                        StudentHomework sh = new StudentHomework();
-                        
+                        StudentHomework sh = context.getBean("StudentHomework",StudentHomework.class);;
                         sh.setId(resultSet.getLong("id"));
                         sh.setStudent_Id(resultSet.getLong("student_id"));
                         sh.setHomework_Id(resultSet.getLong("homework_id"));
