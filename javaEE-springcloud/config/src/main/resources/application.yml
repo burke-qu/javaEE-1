@@ -1,0 +1,4 @@
+spring:
+  profiles:
+    active: git
+#  native 表示读取本地文件，即会读取application-native文件，也可以配置成git来读取git文件

@@ -1,0 +1,20 @@
+server:
+  port: 8903
+spring:
+  application:
+    name: config-server
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/yeyi-a11y/spring-cloud-config
+          username: yeyi-a11y
+          password: 209999girl
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8900/eureka/      #注册中心的地址
+      # 注册到Eureka的注册中心
+    register-with-eureka: true
+    # 获取注册实例列表
+    fetch-registry: true

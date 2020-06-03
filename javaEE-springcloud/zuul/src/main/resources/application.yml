@@ -1,0 +1,21 @@
+server:
+  port: 8902
+spring:
+  application:
+    name: zuul
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8900/eureka/      #注册中心的地址
+      # 注册到Eureka的注册中心
+    register-with-eureka: true
+    # 获取注册实例列表
+    fetch-registry: true
+#zuul配置项
+zuul:
+  server-path: /  #ZuulServlet 匹配的路径，默认为 /zuul
+  #路由配置项，对应 ZuulRoute map 其中 key 为路由编号，value 为路由具体配置
+  routes:
+    route_consumer:
+      path: /consumer/**  #匹配的 URL 地址,路由给匹配的服务后，服务收到的的url为/**。
+      service-id:  CONSUMER #匹配的服务名称。
