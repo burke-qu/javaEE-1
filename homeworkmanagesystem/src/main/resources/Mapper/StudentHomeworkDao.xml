@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.example.homeworkmanagesystem.dao.StudentHomeworkDao">
+
+    <resultMap type="com.example.homeworkmanagesystem.entity.StudentHomework" id="StudentHomeworkMap">
+        <result property="id" column="id" jdbcType="INTEGER"/>
+        <result property="studentId" column="student_id" jdbcType="INTEGER"/>
+        <result property="homeworkId" column="homework_id" jdbcType="INTEGER"/>
+        <result property="homeworkTitle" column="homework_title" jdbcType="VARCHAR"/>
+        <result property="homeworkContent" column="homework_content" jdbcType="VARCHAR"/>
+        <result property="createTime" column="create_time" jdbcType="TIMESTAMP"/>
+        <result property="updateTime" column="update_time" jdbcType="TIMESTAMP"/>
+    </resultMap>
+
+    <!--查询单个-->
+    <select id="queryById" resultMap="StudentHomeworkMap">
+        select
+          id, student_id, homework_id, homework_title, homework_content, create_time, update_time
+        from school.student_homework
+        where id = #{id}
+    </select>
+
+    <!--查询全部数据-->
+    <select id="queryAll" resultMap="StudentHomeworkMap">
+        select
+          id, student_id, homework_id, homework_title, homework_content, create_time, update_time
+        from school.student_homework
+    </select>
+
+
+    <!--新增一项-->
+    <insert id="insert" keyProperty="id" useGeneratedKeys="true">
+        insert into school.student_homework(student_id, homework_id, homework_title, homework_content, create_time, update_time)
+        values (#{studentId}, #{homeworkId}, #{homeworkTitle}, #{homeworkContent}, #{createTime}, #{updateTime})
+    </insert>
+
+    <!--通过主键修改数据-->
+    <update id="update">
+        update school.student_homework
+        <set>
+            <if test="homeworkContent != null and homeworkContent != ''">
+                homework_content = #{homeworkContent},
+            </if>
+            <if test="createTime != null">
+                create_time = #{createTime},
+            </if>
+            <if test="updateTime != null">
+                update_time = #{updateTime},
+            </if>
+        </set>
+        where student_id = #{studentId} and homework_id = #{homeworkId} and homework_title = #{homeworkTitle}
+    </update>
+
+
+</mapper>

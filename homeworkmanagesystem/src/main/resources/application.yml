@@ -1,0 +1,21 @@
+server:
+  port: 8877
+  tomcat:
+    max-http-form-post-size: 50MB
+  max-http-header-size: 50MB
+  servlet:
+    encoding:
+      charset: utf-8
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/school?useUnicode=true&serverTimezone=UTC
+    username: root
+    password: 209999girl
+  mvc:
+    view:
+      prefix: /WEB-INF/jsp/
+      suffix: .jsp
+mybatis:
+  typeAliasesPackage: cn.example.homeworkmanagesystem.entity
+  mapperLocations: classpath:Mapper/*.xml
