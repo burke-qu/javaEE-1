@@ -10,6 +10,16 @@ spring:
           uri: https://github.com/yeyi-a11y/spring-cloud-config
           username: yeyi-a11y
           password: 209999girl
+    # 开启消息跟踪
+    bus:
+     trace:
+       enabled: true
+
+  rabbitmq:
+    host: 127.0.0.1
+    port: 5672
+    username: yeyi
+    password: 123456
 eureka:
   client:
     serviceUrl:
@@ -18,3 +28,15 @@ eureka:
     register-with-eureka: true
     # 获取注册实例列表
     fetch-registry: true
+# 度量指标监控与健康检查
+# 访问端点根路径，默认为 /actuator
+management:
+   endpoints:
+     web:
+       base-path: /actuator
+       exposure:
+          include: bus-refresh   # 需要开启的端点，这里主要用到的是 bus-refresh 这个端点
+          #exclude:               # 不需要开启的端点
+   security:   # 刷新时，关闭安全验证
+     enabled: false
+

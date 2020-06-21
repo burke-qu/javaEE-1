@@ -12,6 +12,7 @@
         <module name="eureka-client" />
         <module name="config" />
         <module name="producer" />
+        <module name="producer-02" />
         <module name="consumer" />
       </profile>
     </annotationProcessing>
@@ -28,6 +29,7 @@
       <module name="eureka-server" options="-parameters" />
       <module name="javaEE-springcloud" options="" />
       <module name="producer" options="-parameters" />
+      <module name="producer-02" options="-parameters" />
       <module name="zuul" options="-parameters" />
     </option>
   </component>

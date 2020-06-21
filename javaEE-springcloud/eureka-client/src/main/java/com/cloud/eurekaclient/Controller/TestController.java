@@ -3,11 +3,13 @@ package com.cloud.eurekaclient.Controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestTemplate;
 
 @RestController
+@RefreshScope // 使用该注解的类，会在接到SpringCloud配置中心配置刷新的时候，自动将新的配置更新到该类对应的字段中。
 public class TestController {
 
     @Autowired
@@ -19,12 +21,13 @@ public class TestController {
         return restTemplate.getForObject("http://ZUUL/consumer/v1", String.class);
     }
 
-//    @Value("${eureka.client.serviceUrl.defaultZone}")
-//    private  String hello;
-//    @RequestMapping("/hello")
-//    public String getConfigFile(){
-//
-//        return this.hello;
-//    }
+    @Value("${hello}")
+    private  String hello;
+
+    @RequestMapping("/hello")
+    public String getConfigFile(){
+
+        return this.hello;
+    }
 
 }
